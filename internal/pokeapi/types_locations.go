@@ -64,4 +64,3 @@ type Location struct {
 		} `json:"version_details"`
 	} `json:"pokemon_encounters"`
 }
-

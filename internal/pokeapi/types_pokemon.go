@@ -244,4 +244,3 @@ type Pokemon struct {
 	} `json:"types"`
 	Weight int `json:"weight"`
 }
-

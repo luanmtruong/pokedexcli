@@ -1,0 +1,29 @@
+{
+  "name": "pokedexcli",
+  "engineVersion": "v0.18.8",
+  "sdk": {
+    "source": "go"
+  },
+  "dependencies": [
+    {
+      "name": "github-issue",
+      "source": "github.com/kpenfound/dag/github-issue@46246adc2083c59db0076730e86b6fda2db8261a",
+      "pin": "46246adc2083c59db0076730e86b6fda2db8261a"
+    },
+    {
+      "name": "golang",
+      "source": "github.com/kpenfound/dagger-modules/golang@f7964245d0146dd3810f247c6c09eb33518d4654",
+      "pin": "f7964245d0146dd3810f247c6c09eb33518d4654"
+    },
+    {
+      "name": "golangci-lint",
+      "source": "github.com/sagikazarmark/daggerverse/golangci-lint@ceffda4aebd349a24fc00e591b4ed9b801535b65",
+      "pin": "ceffda4aebd349a24fc00e591b4ed9b801535b65"
+    },
+    {
+      "name": "workspace",
+      "source": ".dagger/workspace"
+    }
+  ],
+  "source": ".dagger"
+}

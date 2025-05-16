@@ -1,0 +1,16 @@
+name: ci
+on:
+  push:
+    branches: ["**", "!main"]
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dagger/dagger-for-github@8.0.0
+      - name: Check
+        run: dagger call check --github-token GH_TOKEN --model gemini-2.0-flash --commit $GITHUB_SHA
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

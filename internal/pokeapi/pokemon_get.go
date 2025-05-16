@@ -28,13 +28,17 @@ func (c *Client) GetPokemon(pokemonName string) (Pokemon, error) {
 	if err != nil {
 		return Pokemon{}, err
 	}
-	defer resp.Body.Close()
+	defer func() {
+		err = resp.Body.Close()
+	}()
+	if err != nil {
+		return Pokemon{}, err
+	}
 
 	dat, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return Pokemon{}, err
 	}
-
 
 	pokemonResp := Pokemon{}
 	err = json.Unmarshal(dat, &pokemonResp)
@@ -45,5 +49,4 @@ func (c *Client) GetPokemon(pokemonName string) (Pokemon, error) {
 	c.cache.Add(url, dat)
 
 	return pokemonResp, nil
-
 }

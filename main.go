@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/luanmtruong/pokedexcli/internal/pokeapi"
 	"time"
+
+	"github.com/luanmtruong/pokedexcli/internal/pokeapi"
 )
 
 func main() {

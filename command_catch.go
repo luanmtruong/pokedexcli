@@ -1,9 +1,9 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"math/rand"
-	"errors"
 )
 
 func commandCatch(cfg *config, args ...string) error {

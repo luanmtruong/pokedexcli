@@ -38,4 +38,3 @@ func commandMapb(cfg *config, args ...string) error {
 	}
 	return nil
 }
-
